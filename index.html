@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kanghyun Lee | Research</title>
+    <title>Stan Kanghyun Lee | Research</title>
     <meta
       name="description"
-      content="Personal research website for Kanghyun Lee, focused on cross-view geo-localization, trajectory reasoning, and spatial representation learning."
+      content="Personal research website for Stan Kanghyun Lee, focused on learning-based autonomy, cross-view geo-localization, autonomous driving, and robotics."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,11 @@
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="#top">Kanghyun Lee</a>
+      <a class="brand" href="#top">Stan Kanghyun Lee</a>
       <nav class="nav-links" aria-label="Site sections">
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#current">Now</a>
         <a href="#writing">Writing</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -31,16 +32,16 @@
       <section class="hero" aria-labelledby="hero-title">
         <canvas id="research-map" aria-hidden="true"></canvas>
         <div class="hero-content">
-          <p class="eyebrow">Cross-view geo-localization · spatial AI · trajectory reasoning</p>
-          <h1 id="hero-title">Kanghyun Lee</h1>
+          <p class="eyebrow">Autonomy · Robotics · CVGL · Physical AI</p>
+          <h1 id="hero-title">Stan Kanghyun Lee</h1>
           <p class="hero-copy">
-            I build systems that connect ground-level observations to satellite-scale
-            structure, with a focus on robust localization, learned spatial memory,
-            and benchmark-grounded research.
+            I build learning-based autonomy systems from CARLA simulation to real-world
+            robotics, with research interests across reinforcement learning, imitation
+            learning, cross-view geo-localization, and physical AI.
           </p>
           <div class="hero-actions" aria-label="Quick links">
             <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="#contact">Get in touch</a>
+            <a class="button secondary" href="https://github.com/leekh69450">GitHub</a>
           </div>
         </div>
       </section>
@@ -48,14 +49,13 @@
       <section class="section intro" aria-labelledby="intro-title">
         <div>
           <p class="section-kicker">Research Focus</p>
-          <h2 id="intro-title">Learning spatial correspondence from imperfect views.</h2>
+          <h2 id="intro-title">Learning systems that connect perception, place, and action.</h2>
         </div>
         <p>
-          My current work explores how models can localize a moving camera using
-          satellite imagery, partial observations, cached visual tokens, and
-          trajectory-level constraints. The long-term goal is to make geo-localization
-          systems that understand place as structure, not just as nearest-neighbor
-          image retrieval.
+          My work sits at the boundary between spatial perception and embodied decision
+          making. I study how agents localize, navigate, and act using learned visual
+          representations, whether the setting is satellite-ground matching, driving in
+          simulation, or coordinated mobile robotics.
         </p>
       </section>
 
@@ -69,32 +69,32 @@
             <span class="card-index">01</span>
             <h3>Cross-view localization</h3>
             <p>
-              Matching street-level trajectories to overhead imagery while handling
-              viewpoint gaps, satellite coverage quality, and hard-site ambiguity.
+              Matching ground-level trajectories to overhead imagery while handling
+              viewpoint gaps, satellite coverage quality, and site-level ambiguity.
             </p>
           </article>
           <article class="research-card">
             <span class="card-index">02</span>
-            <h3>Spatial memory tokens</h3>
+            <h3>Autonomous driving</h3>
             <p>
-              Exploring memory-like representations that accumulate evidence across
-              views and expose where a model is confident, repetitive, or collapsed.
+              Training driving policies in CARLA with imitation learning and
+              reinforcement learning, while paying attention to stability and transfer.
             </p>
           </article>
           <article class="research-card">
             <span class="card-index">03</span>
-            <h3>Foundation visual features</h3>
+            <h3>Robotics systems</h3>
             <p>
-              Using DINO-style visual tokens for ground and satellite encoders, with
-              careful separation between cached-feature pipelines and in-loop training.
+              Building physical AI systems that move from software experiments toward
+              real robot behavior and multi-robot coordination.
             </p>
           </article>
           <article class="research-card">
             <span class="card-index">04</span>
             <h3>Trajectory-aware reasoning</h3>
             <p>
-              Combining retrieval, offset refinement, temporal consistency, and path
-              shape so localization uses motion as evidence instead of metadata alone.
+              Using paths, temporal consistency, and motion patterns as evidence for
+              localization, planning, and scene understanding.
             </p>
           </article>
         </div>
@@ -103,39 +103,91 @@
       <section class="section projects" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="section-kicker">Work</p>
-          <h2 id="projects-title">Selected Projects</h2>
+          <h2 id="projects-title">Main Projects</h2>
         </div>
         <div class="project-list">
           <article class="project-row">
             <div>
-              <p class="project-tag">WRIVA benchmark</p>
-              <h3>Challenge baseline and dense retrieval</h3>
+              <p class="project-tag">Cross-view geo-localization</p>
+              <h3>CVGL Challenge</h3>
             </div>
-            <p>
-              A benchmark-driven pipeline for cross-view geo-localization with satellite
-              quality audits, dense crop retrieval, offset refinement, and temporal
-              reranking.
-            </p>
+            <div class="project-body">
+              <p>
+                A WRIVA / VisymScenes cross-view geo-localization project focused on
+                matching ground trajectories to satellite imagery through dense retrieval,
+                quality-aware satellite audits, temporal reranking, and learned offset
+                refinement.
+              </p>
+              <div class="project-links">
+                <span>Private research repo</span>
+              </div>
+            </div>
           </article>
           <article class="project-row">
             <div>
-              <p class="project-tag">Google Maps Brain</p>
-              <h3>Observation memory for place understanding</h3>
+              <p class="project-tag">Autonomous driving</p>
+              <h3>CARLA driving agents</h3>
             </div>
-            <p>
-              Experiments around local satellite chips, dynamic memories, observation
-              diversity, and diagnostics that separate shortlist quality from voting
-              collapse.
-            </p>
+            <div class="project-body">
+              <p>
+                End-to-end driving experiments in CARLA, including a DAVE-2 style
+                imitation learning pipeline and DQN-based autonomous driving agents that
+                emphasize system stability, replay buffers, target networks, and simulator
+                control loops.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/leekh69450/dave2net-carla">DAVE2Net CARLA</a>
+                <a href="https://github.com/leekh69450/CARLA_DQN">CARLA DQN</a>
+              </div>
+            </div>
           </article>
           <article class="project-row">
             <div>
-              <p class="project-tag">Research prototype</p>
-              <h3>Path-shaped satellite site matching</h3>
+              <p class="project-tag">Robotics</p>
+              <h3>Hoplite robot formation</h3>
             </div>
+            <div class="project-body">
+              <p>
+                A robotics systems project for moving AgileX Limo robots in formation,
+                connecting perception, coordination, and physical deployment concerns in a
+                real-world multi-robot setting.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/leekh69450/hoplite">Hoplite</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section current-work" id="current" aria-labelledby="current-title">
+        <div class="section-heading">
+          <p class="section-kicker">Now</p>
+          <h2 id="current-title">Current Work</h2>
+        </div>
+        <div class="now-grid">
+          <article>
+            <span>01</span>
+            <h3>CVGL challenge systems</h3>
             <p>
-              A longer-horizon direction that treats trajectories as spatial signatures,
-              using geometry and visual correspondence together for site-level reasoning.
+              Auditing hard sites, satellite coverage, and quality-aware retrieval so
+              benchmark gains come from visual localization rather than hidden priors.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>CARLA autonomy</h3>
+            <p>
+              Developing driving agents in simulation with imitation learning and
+              reinforcement learning pipelines.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Robot formation control</h3>
+            <p>
+              Exploring software and systems patterns for coordinated robot motion in
+              physical platforms.
             </p>
           </article>
         </div>
@@ -147,17 +199,17 @@
           <h2 id="writing-title">Writing and Artifacts</h2>
         </div>
         <div class="writing-grid">
-          <a class="writing-link" href="#" aria-label="Research notes placeholder">
+          <a class="writing-link" href="#projects" aria-label="Research notes">
             <span>Research Notes</span>
-            <strong>Benchmarks, diagnostics, and experiment handoffs</strong>
+            <strong>CVGL baselines, autonomy experiments, and robotics logs</strong>
           </a>
-          <a class="writing-link" href="#" aria-label="Methodology placeholder">
+          <a class="writing-link" href="#research" aria-label="Methodology">
             <span>Methodology</span>
-            <strong>How the localization pipeline is evolving</strong>
+            <strong>How perception, trajectories, and action fit together</strong>
           </a>
-          <a class="writing-link" href="#" aria-label="Project logs placeholder">
+          <a class="writing-link" href="https://github.com/leekh69450" aria-label="GitHub profile">
             <span>Project Logs</span>
-            <strong>Concrete commands, outputs, and next experiments</strong>
+            <strong>Code, systems notes, and public repositories</strong>
           </a>
         </div>
       </section>
@@ -169,21 +221,22 @@
         </div>
         <div class="contact-panel">
           <p>
-            Add your preferred email, Google Scholar, GitHub, CV, and publication links
-            here. This section is ready to become the public-facing contact block.
+            I am interested in research conversations around learning-based autonomy,
+            cross-view localization, autonomous driving, physical AI systems, and
+            robotics. The fastest public entry point for now is GitHub or LinkedIn.
           </p>
           <div class="contact-links">
-            <a href="mailto:your.email@example.com">Email</a>
-            <a href="#">GitHub</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">CV</a>
+            <a href="https://github.com/leekh69450">GitHub</a>
+            <a href="https://www.linkedin.com/in/kanghyun-stan-lee-347613182">LinkedIn</a>
+            <a href="https://leekh69450.github.io/">Website</a>
+            <a href="https://github.com/leekh69450/leekh69450.github.io">Site source</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Kanghyun Lee</p>
+      <p>© <span id="year"></span> Stan Kanghyun Lee</p>
       <a href="#top">Back to top</a>
     </footer>
 

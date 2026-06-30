@@ -204,7 +204,8 @@ a {
 }
 
 .research-card,
-.writing-link {
+.writing-link,
+.now-grid article {
   min-height: 260px;
   padding: 22px;
   background: var(--surface);
@@ -265,6 +266,70 @@ a {
 
 .project-row h3 {
   margin: 8px 0 0;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-links a,
+.project-links span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid rgba(21, 25, 29, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.project-links span {
+  color: var(--muted);
+}
+
+.current-work {
+  padding-bottom: clamp(36px, 6vw, 72px);
+}
+
+.now-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.now-grid article {
+  min-height: 230px;
+  background: #fdfcf8;
+}
+
+.now-grid span {
+  color: var(--rust);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.now-grid h3 {
+  margin: 42px 0 12px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.now-grid p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .writing-grid {
@@ -333,7 +398,8 @@ a {
 
 @media (max-width: 920px) {
   .research-grid,
-  .writing-grid {
+  .writing-grid,
+  .now-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -356,7 +422,7 @@ a {
     width: 100%;
     justify-content: space-between;
     gap: 8px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .hero {
@@ -365,7 +431,8 @@ a {
   }
 
   .research-grid,
-  .writing-grid {
+  .writing-grid,
+  .now-grid {
     grid-template-columns: 1fr;
   }
 
