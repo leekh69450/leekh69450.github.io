@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kanghyun Lee | Research</title>
+    <meta
+      name="description"
+      content="Personal research website for Kanghyun Lee, focused on cross-view geo-localization, trajectory reasoning, and spatial representation learning."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top">Kanghyun Lee</a>
+      <nav class="nav-links" aria-label="Site sections">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="research-map" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">Cross-view geo-localization · spatial AI · trajectory reasoning</p>
+          <h1 id="hero-title">Kanghyun Lee</h1>
+          <p class="hero-copy">
+            I build systems that connect ground-level observations to satellite-scale
+            structure, with a focus on robust localization, learned spatial memory,
+            and benchmark-grounded research.
+          </p>
+          <div class="hero-actions" aria-label="Quick links">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="intro-title">
+        <div>
+          <p class="section-kicker">Research Focus</p>
+          <h2 id="intro-title">Learning spatial correspondence from imperfect views.</h2>
+        </div>
+        <p>
+          My current work explores how models can localize a moving camera using
+          satellite imagery, partial observations, cached visual tokens, and
+          trajectory-level constraints. The long-term goal is to make geo-localization
+          systems that understand place as structure, not just as nearest-neighbor
+          image retrieval.
+        </p>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <p class="section-kicker">Questions</p>
+          <h2 id="research-title">Research Directions</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-index">01</span>
+            <h3>Cross-view localization</h3>
+            <p>
+              Matching street-level trajectories to overhead imagery while handling
+              viewpoint gaps, satellite coverage quality, and hard-site ambiguity.
+            </p>
+          </article>
+          <article class="research-card">
+            <span class="card-index">02</span>
+            <h3>Spatial memory tokens</h3>
+            <p>
+              Exploring memory-like representations that accumulate evidence across
+              views and expose where a model is confident, repetitive, or collapsed.
+            </p>
+          </article>
+          <article class="research-card">
+            <span class="card-index">03</span>
+            <h3>Foundation visual features</h3>
+            <p>
+              Using DINO-style visual tokens for ground and satellite encoders, with
+              careful separation between cached-feature pipelines and in-loop training.
+            </p>
+          </article>
+          <article class="research-card">
+            <span class="card-index">04</span>
+            <h3>Trajectory-aware reasoning</h3>
+            <p>
+              Combining retrieval, offset refinement, temporal consistency, and path
+              shape so localization uses motion as evidence instead of metadata alone.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-kicker">Work</p>
+          <h2 id="projects-title">Selected Projects</h2>
+        </div>
+        <div class="project-list">
+          <article class="project-row">
+            <div>
+              <p class="project-tag">WRIVA benchmark</p>
+              <h3>Challenge baseline and dense retrieval</h3>
+            </div>
+            <p>
+              A benchmark-driven pipeline for cross-view geo-localization with satellite
+              quality audits, dense crop retrieval, offset refinement, and temporal
+              reranking.
+            </p>
+          </article>
+          <article class="project-row">
+            <div>
+              <p class="project-tag">Google Maps Brain</p>
+              <h3>Observation memory for place understanding</h3>
+            </div>
+            <p>
+              Experiments around local satellite chips, dynamic memories, observation
+              diversity, and diagnostics that separate shortlist quality from voting
+              collapse.
+            </p>
+          </article>
+          <article class="project-row">
+            <div>
+              <p class="project-tag">Research prototype</p>
+              <h3>Path-shaped satellite site matching</h3>
+            </div>
+            <p>
+              A longer-horizon direction that treats trajectories as spatial signatures,
+              using geometry and visual correspondence together for site-level reasoning.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section writing" id="writing" aria-labelledby="writing-title">
+        <div class="section-heading">
+          <p class="section-kicker">Notes</p>
+          <h2 id="writing-title">Writing and Artifacts</h2>
+        </div>
+        <div class="writing-grid">
+          <a class="writing-link" href="#" aria-label="Research notes placeholder">
+            <span>Research Notes</span>
+            <strong>Benchmarks, diagnostics, and experiment handoffs</strong>
+          </a>
+          <a class="writing-link" href="#" aria-label="Methodology placeholder">
+            <span>Methodology</span>
+            <strong>How the localization pipeline is evolving</strong>
+          </a>
+          <a class="writing-link" href="#" aria-label="Project logs placeholder">
+            <span>Project Logs</span>
+            <strong>Concrete commands, outputs, and next experiments</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Open to research conversations.</h2>
+        </div>
+        <div class="contact-panel">
+          <p>
+            Add your preferred email, Google Scholar, GitHub, CV, and publication links
+            here. This section is ready to become the public-facing contact block.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="#">GitHub</a>
+            <a href="#">Google Scholar</a>
+            <a href="#">CV</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Kanghyun Lee</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
